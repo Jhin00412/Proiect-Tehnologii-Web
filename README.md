@@ -23,3 +23,14 @@ Sample data used across all stages:
 2. <Casa> Berceni, activ, <inchiriere>
 3. <Garsoniera> Iancului, vandut, <vanzare>
 4. <Apartament 3 camere> Tineretului, retras, <licitatie>
+
+## How to run
+Open `index.html` in a browser. No build step, no server.
+## AI usage
+| Tool | Used for |
+| -------------- | ----------------------------------------- |
+| <ChatGPT> | <generare set de date pentru testare> |
+Details per stage: see the ai-log/ folder.
+## Status
+- [x] Stage 1: static mockup
+Stage 2: data logic in JavaScript 
