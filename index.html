@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Bucharest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="app-header">
+    <div class="header-content">
+        <h1>Real Estate Bucharest</h1>
+        <p>Platforma pentru publicarea si cautarea proprietatilor imobiliare din Bucuresti.</p>
+        <p class="app-count">3 anunturi, dintre care 2 active</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="panel">
+        <h2>Adauga un anunt</h2>
+
+        <form class="item-form">
+
+            <label for="titlu">
+                Titlu
+                <input
+                    type="text"
+                    id="titlu"
+                    name="titlu"
+                    placeholder="Ex: Apartament 2 camere"
+                >
+            </label>
+
+            <label for="descriere">
+                Descriere
+                <textarea
+                    id="descriere"
+                    name="descriere"
+                    placeholder="Descrierea proprietatii"
+                    rows="4"
+                ></textarea>
+            </label>
+
+            <label for="pret">
+                Pret
+                <input
+                    type="number"
+                    id="pret"
+                    name="pret"
+                    placeholder="Ex: 85000"
+                >
+            </label>
+
+            <label for="suprafata">
+                Suprafata
+                <input
+                    type="number"
+                    id="suprafata"
+                    name="suprafata"
+                    placeholder="Ex: 50"
+                >
+            </label>
+
+            <label for="camere">
+                Numar de camere
+                <input
+                    type="number"
+                    id="camere"
+                    name="camere"
+                    placeholder="Ex: 2"
+                >
+            </label>
+
+            <label for="locatie">
+                Locatie
+                <input
+                    type="text"
+                    id="locatie"
+                    name="locatie"
+                    placeholder="Ex: Eroilor, Bucuresti"
+                >
+            </label>
+
+            <label for="tip-proprietate">
+                Tip proprietate
+                <select id="tip-proprietate" name="tip-proprietate">
+                    <option value="">Selecteaza</option>
+                    <option value="apartament">Apartament</option>
+                    <option value="casa">Casa</option>
+                    <option value="garsoniera">Garsoniera</option>
+                </select>
+            </label>
+
+            <label for="categorie">
+                Categorie
+                <select id="categorie" name="categorie">
+                    <option value="">Selecteaza</option>
+                    <option value="vanzare">Vanzare</option>
+                    <option value="inchiriere">Inchiriere</option>
+                    <option value="licitatie">Licitatie</option>
+                </select>
+            </label>
+
+            <button type="submit">Adauga anuntul</button>
+
+        </form>
+    </section>
+
+
+    <section class="panel">
+        <h2>Anunturile mele</h2>
+
+        <ul class="item-list">
+
+            <li class="item-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+                    alt="Apartament modern"
+                >
+
+                <div class="item-content">
+
+                    <div class="item-header">
+                        <div>
+                            <h3>Apartament 2 camere</h3>
+                            <p>Eroilor, Bucuresti</p>
+                        </div>
+
+                        <span class="status">Activ</span>
+                    </div>
+
+                    <p class="description">
+                        Apartament modern, luminos, situat aproape de metrou si de zona centrala.
+                    </p>
+
+                    <div class="details">
+                        <span>Apartament</span>
+                        <span>52 m²</span>
+                        <span>2 camere</span>
+                    </div>
+
+                    <div class="item-bottom">
+                        <strong>89.500 EUR</strong>
+                        <span class="category">Vanzare</span>
+                    </div>
+
+                </div>
+            </li>
+
+
+            <li class="item-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80"
+                    alt="Casa cu gradina"
+                >
+
+                <div class="item-content">
+
+                    <div class="item-header">
+                        <div>
+                            <h3>Casa cu gradina</h3>
+                            <p>Berceni, Bucuresti</p>
+                        </div>
+
+                        <span class="status">Activ</span>
+                    </div>
+
+                    <p class="description">
+                        Casa spatioasa cu gradina proprie, potrivita pentru o familie.
+                    </p>
+
+                    <div class="details">
+                        <span>Casa</span>
+                        <span>120 m²</span>
+                        <span>4 camere</span>
+                    </div>
+
+                    <div class="item-bottom">
+                        <strong>1.100 EUR / luna</strong>
+                        <span class="category">Inchiriere</span>
+                    </div>
+
+                </div>
+            </li>
+
+
+            <li class="item-card done">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80"
+                    alt="Garsoniera moderna"
+                >
+
+                <div class="item-content">
+
+                    <div class="item-header">
+                        <div>
+                            <h3>Garsoniera Iancului</h3>
+                            <p>Iancului, Bucuresti</p>
+                        </div>
+
+                        <span class="status sold">Vandut</span>
+                    </div>
+
+                    <p class="description">
+                        Garsoniera renovata complet, cu acces rapid la mijloacele de transport.
+                    </p>
+
+                    <div class="details">
+                        <span>Garsoniera</span>
+                        <span>34 m²</span>
+                        <span>1 camera</span>
+                    </div>
+
+                    <div class="item-bottom">
+                        <strong>62.000 EUR</strong>
+                        <span class="category">Vanzare</span>
+                    </div>
+
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+</main>
+
+<footer class="app-footer">
+    Proiect Tehnologii Web - Etapa 1
+</footer>
+
+</body>
+</html>
