@@ -16,6 +16,8 @@ Apartament 3 camere Tineretului, retras, licitatie>
 el nu intelege care este diferenta dintre vanzare si inchiriere, considerea 
 inchirierea tot un tip de vanzare>
 
+## Conversations
+- <[share link](https://chatgpt.com/share/6abf4bd3-86e8-83eb-bdaf-1a4448e5ecb6)> (<Stilizare si aduaguare imagini>)
 ### 2. <Stilizare css si includere poze pentru anunturi>
 - Asked: <Sa modifice codul css si index html incat sa includa poze pentru anuturi si o tema de culoare maronie>
 - Got: <modificarile codului trimis initial>
