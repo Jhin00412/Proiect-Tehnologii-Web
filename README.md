@@ -45,4 +45,4 @@ Details per stage: see the `ai-log/` folder.
 ## Status
 
 - [x] Stage 1: static mockup
-- [x] Stage 2: data logic in JavaScript
+- [ ] Stage 2: data logic in JavaScript
