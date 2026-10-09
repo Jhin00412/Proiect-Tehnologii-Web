@@ -42,7 +42,13 @@ Open `index.html` in a browser. No build step, no server.
 
 Details per stage: see the `ai-log/` folder.
 
-## Status
+## Stage 2: data logic
 
+Plain JavaScript, no DOM. `proprietati.js` holds the array and the functions
+that read and change it. Results are printed in the browser console (F12).
+
+## Status
 - [x] Stage 1: static mockup
-- [ ] Stage 2: data logic in JavaScript
+- [x] Stage 2: data logic in JavaScript
+- [ ] Stage 3: Vite and React project
+
