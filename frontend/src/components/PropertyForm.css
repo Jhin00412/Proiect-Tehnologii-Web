@@ -1,0 +1,86 @@
+.item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: var(--brown);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item-form input,
+.item-form textarea,
+.item-form select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--input);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.item-form input::placeholder,
+.item-form textarea::placeholder {
+    color: #a89080;
+}
+
+.item-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.item-form input:focus,
+.item-form textarea:focus,
+.item-form select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #fffaf6;
+    box-shadow: 0 0 0 3px rgba(201, 111, 50, 0.13);
+}
+
+.item-form button {
+    margin-top: 5px;
+    padding: 12px;
+    border: 0;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--accent), #b75d25);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-form button:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, #d77b3b, var(--accent-dark));
+    box-shadow: 0 5px 12px rgba(147, 71, 30, 0.22);
+}
+
+.form-message {
+    margin: 0 0 2px;
+    padding: 10px 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-message.error {
+    border: 1px solid rgba(169, 76, 61, 0.2);
+    background: rgba(169, 76, 61, 0.08);
+    color: var(--red);
+}
+
+.form-message.success {
+    border: 1px solid rgba(79, 125, 80, 0.2);
+    background: rgba(79, 125, 80, 0.08);
+    color: var(--green);
+}

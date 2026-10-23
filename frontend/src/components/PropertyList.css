@@ -1,0 +1,38 @@
+.property-toolbar {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.property-toolbar input,
+.property-toolbar select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--input);
+    color: var(--text);
+    font: inherit;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.empty-state {
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+@media (max-width: 850px) {
+    .property-toolbar {
+        grid-template-columns: 1fr;
+    }
+}

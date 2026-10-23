@@ -1,0 +1,42 @@
+.app-header {
+    padding: 45px 20px;
+    border-bottom: 5px solid #d98242;
+    background: linear-gradient(135deg, #5a321f, #8b4d2c, #c96f32);
+    box-shadow: 0 4px 15px rgba(76, 42, 25, 0.25);
+    color: white;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.app-header h1 {
+    margin: 0 0 10px;
+    font-size: 38px;
+    letter-spacing: 0.5px;
+}
+
+.app-header p {
+    margin: 6px 0;
+    color: #f7e9dc;
+    font-size: 15px;
+}
+
+.app-header .app-count {
+    margin-top: 12px;
+    color: #ffd7b5;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .app-header {
+        padding: 32px 15px;
+    }
+
+    .app-header h1 {
+        font-size: 28px;
+    }
+}
