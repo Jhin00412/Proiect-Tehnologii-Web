@@ -56,8 +56,15 @@ npm install
 npm run dev
 Then open the address printed in the terminal (http://localhost:5173).
 
+## Stage 4: components
+The list is rendered from the data, through two components:
+- `TaskList` receives the whole array and renders one card per item
+- `TaskCard` receives a single item through props and displays it
+
 ## Status
 - [x] Stage 1: static mockup
 - [x] Stage 2: data logic in JavaScript
 - [x] Stage 3: Vite and React project
-
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [ ] Stage 5: local state and events
