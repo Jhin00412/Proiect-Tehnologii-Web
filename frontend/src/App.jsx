@@ -86,7 +86,7 @@ export default function App() {
                 />
             </main>
 
-            <footer className="app-footer">Proiect Tehnologii Web - Etapa 4</footer>
+            <footer className="app-footer">Proiect Tehnologii Web - Doamne ajuta</footer>
         </>
     );
 }
