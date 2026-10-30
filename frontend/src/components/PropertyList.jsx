@@ -6,7 +6,9 @@ export default function PropertyList({
     properties,
     filters,
     onFiltersChange,
-    onStatusChange
+    onStatusChange,
+    onSoldToggle,
+    onDelete
 }) {
     const updateFilter = (name, value) => {
         onFiltersChange((previous) => ({ ...previous, [name]: value }));
@@ -61,6 +63,8 @@ export default function PropertyList({
                             key={property.id}
                             property={property}
                             onStatusChange={onStatusChange}
+                            onSoldToggle={onSoldToggle}
+                            onDelete={onDelete}
                         />
                     ))}
                 </ul>

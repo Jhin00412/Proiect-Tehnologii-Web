@@ -10,12 +10,17 @@ import {
 import { createProperty } from './utils/properties.js';
 import './App.css';
 
+function getInitialTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
 export default function App() {
     const [properties, setProperties] = useState(initialProperties);
     const [filters, setFilters] = useState({ query: '', status: 'all', category: 'all' });
     const [formData, setFormData] = useState(EMPTY_PROPERTY_FORM);
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
+    const [theme, setTheme] = useState(getInitialTheme);
 
     const activeCount = properties.filter((property) => property.status === 'activ').length;
 
@@ -66,9 +71,36 @@ export default function App() {
         );
     };
 
+    const handleSoldToggle = (propertyId, isSold) => {
+        setProperties((previous) =>
+            previous.map((property) =>
+                property.id === propertyId
+                    ? { ...property, status: isSold ? 'vandut' : 'activ' }
+                    : property
+            )
+        );
+    };
+
+    const handleDelete = (propertyId) => {
+        setProperties((previous) =>
+            previous.filter((property) => property.id !== propertyId)
+        );
+    };
+
+    const handleThemeToggle = () => {
+        const nextTheme = theme === 'dark' ? 'light' : 'dark';
+        setTheme(nextTheme);
+        document.documentElement.dataset.theme = nextTheme;
+    };
+
     return (
         <>
-            <AppHeader propertyCount={properties.length} activeCount={activeCount} />
+            <AppHeader
+                propertyCount={properties.length}
+                activeCount={activeCount}
+                theme={theme}
+                onThemeToggle={handleThemeToggle}
+            />
 
             <main className="container">
                 <PropertyForm
@@ -83,6 +115,8 @@ export default function App() {
                     filters={filters}
                     onFiltersChange={setFilters}
                     onStatusChange={handleStatusChange}
+                    onSoldToggle={handleSoldToggle}
+                    onDelete={handleDelete}
                 />
             </main>
 

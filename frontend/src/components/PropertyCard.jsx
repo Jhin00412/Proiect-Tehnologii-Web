@@ -2,7 +2,12 @@ import { CATEGORY_LABELS, STATUS_LABELS } from '../data/properties.js';
 import { capitalize, formatPrice } from '../utils/properties.js';
 import './PropertyCard.css';
 
-export default function PropertyCard({ property, onStatusChange }) {
+export default function PropertyCard({
+    property,
+    onStatusChange,
+    onSoldToggle,
+    onDelete
+}) {
     const isSold = property.status === 'vandut';
 
     return (
@@ -34,20 +39,45 @@ export default function PropertyCard({ property, onStatusChange }) {
                     <span className="category">{CATEGORY_LABELS[property.categorie]}</span>
                 </div>
 
-                <label className="status-selector" htmlFor={`status-${property.id}`}>
-                    <span>Schimba status</span>
-                    <select
-                        id={`status-${property.id}`}
-                        value={property.status}
-                        onChange={(event) => onStatusChange(property.id, event.target.value)}
+                <div className="property-actions">
+                    <label className="sold-toggle" htmlFor={`sold-${property.id}`}>
+                        <input
+                            id={`sold-${property.id}`}
+                            type="checkbox"
+                            checked={isSold}
+                            onChange={(event) =>
+                                onSoldToggle(property.id, event.target.checked)
+                            }
+                        />
+                        Marcheaza ca vandut
+                    </label>
+
+                    <label className="status-selector" htmlFor={`status-${property.id}`}>
+                        <span>Schimba status</span>
+                        <select
+                            id={`status-${property.id}`}
+                            value={property.status}
+                            onChange={(event) =>
+                                onStatusChange(property.id, event.target.value)
+                            }
+                        >
+                            {Object.entries(STATUS_LABELS).map(([status, label]) => (
+                                <option key={status} value={status}>
+                                    {label}
+                                </option>
+                            ))}
+                        </select>
+                    </label>
+
+                    <button
+                        className="delete-property"
+                        type="button"
+                        onClick={() => onDelete(property.id)}
+                        aria-label={`Sterge anuntul: ${property.titlu}`}
                     >
-                        {Object.entries(STATUS_LABELS).map(([status, label]) => (
-                            <option key={status} value={status}>
-                                {label}
-                            </option>
-                        ))}
-                    </select>
-                </label>
+                        Sterge anuntul
+                    </button>
+                </div>
             </div>
         </li>
     );

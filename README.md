@@ -30,41 +30,77 @@ Sample data used across all stages:
 3. Garsoniera - Iancului, vandut, vanzare
 4. Apartament 3 camere - Tineretului, retras, licitatie
 
-## How to run
-
-Open `index.html` in a browser. No build step, no server.
-
 ## AI usage
 
-| Tool | Used for |
-| -------------- | ----------------------------------------- |
-| ChatGPT | generare set de date pentru testare |
-
-Details per stage: see the `ai-log/` folder.
+    | Tool | Used for |
+    | --- | --- |
+    | ChatGPT | Definire set de date pentru test ; see [ai_log/etapa-01.md](ai_log/etapa-01.md). |
 
 ## Stage 2: data logic
 
-Plain JavaScript, no DOM. `proprietati.js` holds the array and the functions
-that read and change it. Results are printed in the browser console (F12).
+The original mockup in `mockup/` keeps its plain JavaScript data and logic
+separate from the DOM.
+
+## AI usage
+
+    | Tool | Used for |
+    | --- | --- |
+    | ChatGPT | Set de date pentru a testa functia adaugaAnunt ; see [ai_log/etapa-02.md](ai_log/etapa-02.md). |
 
 ## Stage 3: Vite and React project
-The app now lives in `frontend/`, built with Vite. The data from stage 2
-moved into the main component; the list is still printed raw.
-## How to run
+
+The application lives in `frontend/`, built with Vite and React. The property
+data is defined in `frontend/src/data/properties.js`.
+
+### How to run
+
+From the project root:
+
+```sh
 cd frontend
 npm install
 npm run dev
-Then open the address printed in the terminal (http://localhost:5173).
+```
+Open the address printed in the terminal (usually http://localhost:5173).
+
+## AI usage
+
+    | Tool | Used for |
+    | --- | --- |
+    | NU A FOST FOLOSIT ; see [ai_log/etapa-03.md](ai_log/etapa-03.md). |
 
 ## Stage 4: components
-The list is rendered from the data, through two components:
-- `TaskList` receives the whole array and renders one card per item
-- `TaskCard` receives a single item through props and displays it
+
+`PropertyList` renders the properties it receives, and `PropertyCard` displays
+each property through props.
+
+## AI usage
+
+    | Tool | Used for |
+    | --- | --- |
+    | Gemini AI |Set de carduri pentru a folosii datele deja avute in format json, pentru a curata app.css si app.jsx; see [ai_log/etapa-04.md](ai_log/etapa-04.md). |
+
+
+
+## Stage 5: local state and events
+The list lives in React state. Checking and deleting work from the page,
+and the counters in the header follow automatically. A button in the
+header switches between light and dark mode. Changes are lost on refresh,
+which is what stage 6 and stage 10 fix.
+
+## AI usage
+
+    | Tool | Used for |
+    | --- | --- |
+    | ChatGPT | Generating sample property data for testing. |
+    | Copilot SDK in VS Code | Implementare stare suplimentara pentru schimb de status al cardului; see [ai_log/etapa-05.md](ai_log/etapa-05.md). |
+
+    Details per stage are in the `ai_log/` folder.
 
 ## Status
 - [x] Stage 1: static mockup
 - [x] Stage 2: data logic in JavaScript
 - [x] Stage 3: Vite and React project
-- [x] Stage 3: Vite and React project
 - [x] Stage 4: components rendered from data
-- [ ] Stage 5: local state and events
+- [x] Stage 5: local state and events
+- [ ] Stage 6: loading data from a mock API

@@ -11,7 +11,7 @@
 .item-card:hover {
     transform: translateY(-2px);
     border-color: var(--accent);
-    box-shadow: 0 8px 22px rgba(87, 50, 31, 0.13);
+    box-shadow: var(--card-shadow);
 }
 
 .item-card > img {
@@ -19,7 +19,7 @@
     width: 190px;
     height: 100%;
     min-height: 220px;
-    background: #dfc7b2;
+    background: var(--detail-border);
     object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease;
@@ -69,6 +69,50 @@
     color: var(--red);
 }
 
+.property-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 18px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--soft-border);
+}
+
+.sold-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--brown);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sold-toggle input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.delete-property {
+    padding: 7px 12px;
+    border: 1px solid var(--red);
+    border-radius: 7px;
+    background: transparent;
+    color: var(--red);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.delete-property:hover {
+    background: var(--red);
+    color: var(--card);
+}
+
 .description {
     margin: 14px 0;
     color: var(--muted);
@@ -83,9 +127,9 @@
 
 .details span {
     padding: 5px 9px;
-    border: 1px solid #dfc7b2;
+    border: 1px solid var(--detail-border);
     border-radius: 5px;
-    background: #f5e8dc;
+    background: var(--detail-background);
     color: var(--brown-light);
     font-size: 12px;
 }
@@ -123,9 +167,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    margin-top: 16px;
-    padding-top: 14px;
-    border-top: 1px solid #ecd9c7;
+    margin-top: 0;
     color: var(--brown);
     font-size: 13px;
     font-weight: 700;

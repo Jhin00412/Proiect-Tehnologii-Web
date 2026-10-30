@@ -29,7 +29,7 @@
 
 .item-form input::placeholder,
 .item-form textarea::placeholder {
-    color: #a89080;
+    color: var(--placeholder);
 }
 
 .item-form textarea {
@@ -42,8 +42,8 @@
 .item-form select:focus {
     outline: none;
     border-color: var(--accent);
-    background: #fffaf6;
-    box-shadow: 0 0 0 3px rgba(201, 111, 50, 0.13);
+    background: var(--focus-background);
+    box-shadow: var(--focus-shadow);
 }
 
 .item-form button {
@@ -51,7 +51,7 @@
     padding: 12px;
     border: 0;
     border-radius: 7px;
-    background: linear-gradient(135deg, var(--accent), #b75d25);
+    background: linear-gradient(135deg, var(--accent), var(--accent-deep));
     color: white;
     font-size: 14px;
     font-weight: bold;
@@ -61,8 +61,8 @@
 
 .item-form button:hover {
     transform: translateY(-1px);
-    background: linear-gradient(135deg, #d77b3b, var(--accent-dark));
-    box-shadow: 0 5px 12px rgba(147, 71, 30, 0.22);
+    background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+    box-shadow: var(--button-shadow);
 }
 
 .form-message {
