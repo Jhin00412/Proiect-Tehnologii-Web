@@ -39,7 +39,7 @@ Sample data used across all stages:
     | ChatGPT | Definire set de date pentru test ; see [ai_log/etapa-01.md](ai_log/etapa-01.md). |
 
 
-| ID | Requirement | Where (permalink) | How to check |
+    | ID | Requirement | Where (permalink) | How to check |
     |---|---|---|---|
     | S1-R1 | README: description, fields, sample data, how to run | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) | Read |
     | S1-R2 | AI usage section | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) | Read |
@@ -62,7 +62,7 @@ separate from the DOM.
     | --- | --- |
     | ChatGPT | Set de date pentru a testa functia adaugaAnunt ; see [ai_log/etapa-02.md](ai_log/etapa-02.md). |
 
-| ID | Requirement | Where (permalink) | How to check |
+    | ID | Requirement | Where (permalink) | How to check |
     |---|---|---|---|
     | S2-R1 | JS file linked; logs on page load | [index.html](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/fabfbc374dd55f72b99bcfe46afcc7400ec4623d/index.html#L1-L12) | Open page, press F12 |
     | S2-R2 | 3+ items with id, name, state and tag | [proprietati.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/fabfbc374dd55f72b99bcfe46afcc7400ec4623d/proprietati.js#L19-L95) | Read the initial array |
@@ -94,7 +94,7 @@ Open the address printed in the terminal (usually http://localhost:5173).
     | --- | --- |
     | NU A FOST FOLOSIT ; see [ai_log/etapa-03.md](ai_log/etapa-03.md). |
 
-| ID | Requirement | Where (permalink) | How to check |
+    | ID | Requirement | Where (permalink) | How to check |
     |---|---|---|---|
     | S3-R1 | `npm run dev` starts without errors | [frontend/package.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/package.json#L6-L10) | Run `npm install`, then `npm run dev` in `frontend/` |
     | S3-R2 | App name and counter computed from data | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/src/App.jsx#L1-L88) | Change data and save |
@@ -115,7 +115,7 @@ each property through props.
     | --- | --- |
     | Gemini AI |Set de carduri pentru a folosii datele deja avute in format json, pentru a curata app.css si app.jsx; see [ai_log/etapa-04.md](ai_log/etapa-04.md). |
 
-| ID | Requirement | Where (permalink) | How to check |
+    | ID | Requirement | Where (permalink) | How to check |
     |---|---|---|---|
     | S4-R1 | At least two components in `src/components/` | [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyCard.jsx#L1-L54) · [frontend/src/components/PropertyList.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyList.jsx#L1-L70) | Open the components folder |
     | S4-R2 | Card receives data through props | [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyCard.jsx#L5-L35) | Read the component parameters and rendered fields |
@@ -140,7 +140,7 @@ which is what stage 6 and stage 10 fix.
 
     Details per stage are in the `ai_log/` folder.
 
-| ID | Requirement | Where (permalink) | How to check |
+    | ID | Requirement | Where (permalink) | How to check |
     |---|---|---|---|
     | S5-R1 | List kept in `useState`, in App | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L17-L25) | Read |
     | S5-R2 | Toggling changes state and card look | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L74-L82) · [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/components/PropertyCard.jsx#L37-L54) | Click a sold-status checkbox |
