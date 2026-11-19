@@ -194,11 +194,12 @@ Details per stage are in the `ai_log/` folder.
 ### Checklist Etapa 6
 
 | ID | Requirement | Where (permalink) | How to check |
-| --- | --- | --- | --- |
-| S6-R1 | npm run api starts, route shows JSON | [package.json#L11](frontend/package.json#L11), [db.json](frontend/db.json) | open localhost:3001/proprietati |
-| S6-R2 | data no longer in React code | [App.jsx#L15](frontend/src/App.jsx#L15) (useState([])) | read |
-| S6-R3 | loading message while waiting | [App.jsx#L140-L145](frontend/src/App.jsx#L140-L145) | --delay 4000 |
-| S6-R4 | error message when API is down | [App.jsx#L147-L154](frontend/src/App.jsx#L147-L154) | stop npm run api, refresh |
-| S6-R5 | fetch only in api.js, URL from env | [api.js#L1-L9](frontend/src/api.js#L1-L9), [.env.example](frontend/.env.example) | search for fetch |
-| S6-R6 | README Stage 6 section + AI log | [README.md](README.md), [ai_log/etapa-06.md](ai_log/etapa-06.md) | read |
-| S6-R7 | commit "Stage 6: data from a mock API" pushed | commit history | git log |
+|---|---|---|---|
+| S6-R1 | npm run api starts, route shows JSON | [frontend/package.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/package.json#L11) · [frontend/db.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/db.json) | open localhost:3001/proprietati |
+| S6-R2 | data no longer in React code | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L15) (useState([])) | read |
+| S6-R3 | loading message while waiting | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L140-L145) | --delay 4000 |
+| S6-R4 | error message when API is down | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L147-L154) | stop npm run api, refresh |
+| S6-R5 | fetch only in api.js, URL from env | [frontend/src/api.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/api.js#L1-L9) · [frontend/.env.example](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/.env.example#L1) | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/README.md) · [ai_log/etapa-06.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/ai_log/etapa-06.md) | read |
+| S6-R7 | commit "Stage 6: data from a mock API" pushed | [Stage 6 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/73c8abadaf276434dec2dae62d613619e8d738b5) | check commit history |
+
