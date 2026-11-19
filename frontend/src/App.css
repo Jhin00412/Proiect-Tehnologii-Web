@@ -26,6 +26,8 @@
     --card-shadow: 0 8px 22px rgba(87, 50, 31, 0.13);
     --button-shadow: 0 5px 12px rgba(147, 71, 30, 0.22);
     --focus-shadow: 0 0 0 3px rgba(201, 111, 50, 0.13);
+    --error-bg: #fdf2f8;
+    --error-border: #fbcfe8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,6 +55,8 @@
         --card-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
         --button-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
         --focus-shadow: 0 0 0 3px rgba(233, 148, 91, 0.2);
+        --error-bg: #3b1d2e;
+        --error-border: #6b2a4a;
     }
 }
 
@@ -80,6 +84,8 @@
     --card-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
     --button-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
     --focus-shadow: 0 0 0 3px rgba(233, 148, 91, 0.2);
+    --error-bg: #3b1d2e;
+    --error-border: #6b2a4a;
 }
 
 body {
@@ -148,3 +154,16 @@ body {
         padding: 18px;
     }
 }
+
+.info {
+    color: var(--muted);
+}
+
+.error {
+    color: var(--red);
+    background: var(--error-bg);
+    border: 1px solid var(--error-border);
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+

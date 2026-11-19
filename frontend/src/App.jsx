@@ -1,12 +1,9 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import AppHeader from './components/AppHeader.jsx';
 import PropertyForm from './components/PropertyForm.jsx';
 import PropertyList from './components/PropertyList.jsx';
-import {
-    EMPTY_PROPERTY_FORM,
-    initialProperties,
-    STATUSES
-} from './data/properties.js';
+import { fetchProprietati } from './api.js';
+import { EMPTY_PROPERTY_FORM } from './data/properties.js';
 import { createProperty } from './utils/properties.js';
 import './App.css';
 
@@ -15,12 +12,41 @@ function getInitialTheme() {
 }
 
 export default function App() {
-    const [properties, setProperties] = useState(initialProperties);
+    const [properties, setProperties] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const [filters, setFilters] = useState({ query: '', status: 'all', category: 'all' });
     const [formData, setFormData] = useState(EMPTY_PROPERTY_FORM);
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
     const [theme, setTheme] = useState(getInitialTheme);
+
+    useEffect(() => {
+        let ignore = false;
+
+        async function load() {
+            try {
+                const data = await fetchProprietati();
+                if (!ignore) {
+                    setProperties(data);
+                }
+            } catch (err) {
+                if (!ignore) {
+                    setError(err.message);
+                }
+            } finally {
+                if (!ignore) {
+                    setLoading(false);
+                }
+            }
+        }
+
+        load();
+
+        return () => {
+            ignore = true;
+        };
+    }, []);
 
     const activeCount = properties.filter((property) => property.status === 'activ').length;
 
@@ -110,14 +136,33 @@ export default function App() {
                     onFieldChange={handleFieldChange}
                     onSubmit={handleSubmit}
                 />
-                <PropertyList
-                    properties={visibleProperties}
-                    filters={filters}
-                    onFiltersChange={setFilters}
-                    onStatusChange={handleStatusChange}
-                    onSoldToggle={handleSoldToggle}
-                    onDelete={handleDelete}
-                />
+
+                {loading && (
+                    <section className="panel">
+                        <h2>Anunturile mele</h2>
+                        <p className="info">Se incarca proprietatile...</p>
+                    </section>
+                )}
+
+                {error && (
+                    <section className="panel">
+                        <h2>Anunturile mele</h2>
+                        <p className="error">
+                            Nu am putut incarca datele: {error}. Ruleaza <code>npm run api</code>?
+                        </p>
+                    </section>
+                )}
+
+                {!loading && !error && (
+                    <PropertyList
+                        properties={visibleProperties}
+                        filters={filters}
+                        onFiltersChange={setFilters}
+                        onStatusChange={handleStatusChange}
+                        onSoldToggle={handleSoldToggle}
+                        onDelete={handleDelete}
+                    />
+                )}
             </main>
 
             <footer className="app-footer">Proiect Tehnologii Web - Doamne ajuta</footer>

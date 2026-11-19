@@ -164,6 +164,23 @@ Details per stage are in the `ai_log/` folder.
 | S5-R7 | No console warnings; README and AI log updated | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) · [ai_log/etapa-05.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-05.md#L1-L1250) | Open DevTools Console |
 | S5-R8 | Stage 5 commit pushed | [Stage 5 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/bca6a1720fc13b3876236d7118c5a0e3874a7cf7) | Check commit history |
 
+## Stage 6: data from a mock API
+The list is served by json-server from `db.json`. The app fetches it on load
+and shows a loading state and an error state.
+
+```sh
+npm run api # terminal 1, http://localhost:3001
+npm run dev # terminal 2, http://localhost:5173
+```
+
+## AI usage
+
+| Tool | Used for |
+| --- | --- |
+| Google Antigravity / Gemini | Mutare date in db.json cu json-server, apel fetchProprietati in api.js, incarcare useEffect si tratare stari loading/eroare; see [ai_log/etapa-06.md](ai_log/etapa-06.md). |
+
+Details per stage are in the `ai_log/` folder.
+
 ## Status
 
 - [x] Stage 1: static mockup
@@ -171,4 +188,17 @@ Details per stage are in the `ai_log/` folder.
 - [x] Stage 3: Vite and React project
 - [x] Stage 4: components rendered from data
 - [x] Stage 5: local state and events
-- [ ] Stage 6: loading data from a mock API
+- [x] Stage 6: data from a mock API
+- [ ] Stage 7: form and validation
+
+### Checklist Etapa 6
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S6-R1 | npm run api starts, route shows JSON | [package.json#L11](frontend/package.json#L11), [db.json](frontend/db.json) | open localhost:3001/proprietati |
+| S6-R2 | data no longer in React code | [App.jsx#L15](frontend/src/App.jsx#L15) (useState([])) | read |
+| S6-R3 | loading message while waiting | [App.jsx#L140-L145](frontend/src/App.jsx#L140-L145) | --delay 4000 |
+| S6-R4 | error message when API is down | [App.jsx#L147-L154](frontend/src/App.jsx#L147-L154) | stop npm run api, refresh |
+| S6-R5 | fetch only in api.js, URL from env | [api.js#L1-L9](frontend/src/api.js#L1-L9), [.env.example](frontend/.env.example) | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | [README.md](README.md), [ai_log/etapa-06.md](ai_log/etapa-06.md) | read |
+| S6-R7 | commit "Stage 6: data from a mock API" pushed | commit history | git log |
