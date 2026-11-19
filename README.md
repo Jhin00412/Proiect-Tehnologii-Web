@@ -189,7 +189,21 @@ Details per stage are in the `ai_log/` folder.
 - [x] Stage 4: components rendered from data
 - [x] Stage 5: local state and events
 - [x] Stage 6: data from a mock API
-- [ ] Stage 7: form and validation
+- [x] Stage 7: form and validation
+- [ ] Stage 8: routing and detail page
+
+## Stage 7: form and validation
+Tasks can be added from the page. The form is controlled and validated,
+and every change (add, toggle, delete) goes to the API before it shows up
+in the list.
+
+## AI usage
+
+| Tool | Used for |
+| --- | --- |
+| Google Antigravity / Gemini | Formular controlat si validat, operatii CRUD (POST, PATCH, DELETE) prin functia request in api.js, atribute data-testid si configurare tw.json; see [ai_log/etapa-07.md](ai_log/etapa-07.md). |
+
+Details per stage are in the `ai_log/` folder.
 
 ### Checklist Etapa 6
 
@@ -202,4 +216,17 @@ Details per stage are in the `ai_log/` folder.
 | S6-R5 | fetch only in api.js, URL from env | [frontend/src/api.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/api.js#L1-L9) · [frontend/.env.example](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/.env.example#L1) | search for fetch |
 | S6-R6 | README Stage 6 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/README.md) · [ai_log/etapa-06.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/ai_log/etapa-06.md) | read |
 | S6-R7 | commit "Stage 6: data from a mock API" pushed | [Stage 6 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/73c8abadaf276434dec2dae62d613619e8d738b5) | check commit history |
+
+### Checklist Etapa 7
+
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S7-R1 | controlled form: value + onChange on every field | [frontend/src/components/PropertyForm.jsx](frontend/src/components/PropertyForm.jsx) | read |
+| S7-R2 | empty title shows an error, nothing is sent | [frontend/src/components/PropertyForm.jsx](frontend/src/components/PropertyForm.jsx#L17-L29) (valideaza) | submit empty, watch Network |
+| S7-R3 | added item shows in the list and survives refresh | [frontend/src/App.jsx](frontend/src/App.jsx#L67-L70) (handleAdd), [frontend/src/api.js](frontend/src/api.js#L18-L23) | add, refresh |
+| S7-R4 | toggle and delete survive refresh | [frontend/src/App.jsx](frontend/src/App.jsx#L72-L102) | toggle/delete, refresh |
+| S7-R5 | button disabled while sending, form cleared only on success | [frontend/src/components/PropertyForm.jsx](frontend/src/components/PropertyForm.jsx#L31-L77) | --delay 3000; stop API and submit |
+| S7-R6 | tw.json and the data-testid attributes from table 7.3 | [tw.json](tw.json), [frontend/src/components/PropertyCard.jsx](frontend/src/components/PropertyCard.jsx) | querySelectorAll in the console |
+| S7-R7 | README Stage 7 section + AI log | [README.md](README.md), [ai_log/etapa-07.md](ai_log/etapa-07.md) | read |
+| S7-R8 | commit "Stage 7: form and validation" pushed | commit history | git log |
 

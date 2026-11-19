@@ -6,69 +6,75 @@ export default function PropertyList({
     properties,
     filters,
     onFiltersChange,
-    onStatusChange,
+    onToggle,
     onSoldToggle,
+    onStatusChange,
     onDelete
 }) {
     const updateFilter = (name, value) => {
-        onFiltersChange((previous) => ({ ...previous, [name]: value }));
+        if (onFiltersChange) {
+            onFiltersChange((previous) => ({ ...previous, [name]: value }));
+        }
     };
 
     return (
-        <section className="panel">
-            <h2>Anunturile mele</h2>
+        <>
+            {filters && onFiltersChange && (
+                <div className="property-toolbar">
+                    <input
+                        type="search"
+                        aria-label="Cautare proprietati"
+                        placeholder="Cauta dupa titlu, locatie sau descriere"
+                        value={filters.query}
+                        onChange={(event) => updateFilter('query', event.target.value)}
+                    />
 
-            <div className="property-toolbar">
-                <input
-                    type="search"
-                    aria-label="Cautare proprietati"
-                    placeholder="Cauta dupa titlu, locatie sau descriere"
-                    value={filters.query}
-                    onChange={(event) => updateFilter('query', event.target.value)}
-                />
+                    <select
+                        aria-label="Filtreaza dupa categorie"
+                        value={filters.category}
+                        onChange={(event) => updateFilter('category', event.target.value)}
+                    >
+                        <option value="all">Toate categoriile</option>
+                        {CATEGORIES.map((category) => (
+                            <option key={category} value={category}>
+                                {CATEGORY_LABELS[category]}
+                            </option>
+                        ))}
+                    </select>
 
-                <select
-                    aria-label="Filtreaza dupa categorie"
-                    value={filters.category}
-                    onChange={(event) => updateFilter('category', event.target.value)}
-                >
-                    <option value="all">Toate categoriile</option>
-                    {CATEGORIES.map((category) => (
-                        <option key={category} value={category}>
-                            {CATEGORY_LABELS[category]}
-                        </option>
-                    ))}
-                </select>
-
-                <select
-                    aria-label="Filtreaza dupa status"
-                    value={filters.status}
-                    onChange={(event) => updateFilter('status', event.target.value)}
-                >
-                    <option value="all">Toate statusurile</option>
-                    {STATUSES.map((status) => (
-                        <option key={status} value={status}>
-                            {STATUS_LABELS[status]}
-                        </option>
-                    ))}
-                </select>
-            </div>
+                    <select
+                        aria-label="Filtreaza dupa status"
+                        value={filters.status}
+                        onChange={(event) => updateFilter('status', event.target.value)}
+                    >
+                        <option value="all">Toate statusurile</option>
+                        {STATUSES.map((status) => (
+                            <option key={status} value={status}>
+                                {STATUS_LABELS[status]}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            )}
 
             {properties.length === 0 ? (
-                <p className="empty-state">Niciun anunt nu corespunde filtrelor curente.</p>
+                <p className="empty-state" data-testid="empty">
+                    Niciun anunt disponibil.
+                </p>
             ) : (
                 <ul className="item-list">
                     {properties.map((property) => (
                         <PropertyCard
                             key={property.id}
                             property={property}
-                            onStatusChange={onStatusChange}
+                            onToggle={onToggle}
                             onSoldToggle={onSoldToggle}
+                            onStatusChange={onStatusChange}
                             onDelete={onDelete}
                         />
                     ))}
                 </ul>
             )}
-        </section>
+        </>
     );
 }

@@ -167,3 +167,13 @@ body {
     padding: 10px 12px;
 }
 
+.task-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.task-form input[aria-invalid="true"] {
+    border-color: var(--red);
+}
+
+

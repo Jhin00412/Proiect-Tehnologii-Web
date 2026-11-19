@@ -2,9 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import AppHeader from './components/AppHeader.jsx';
 import PropertyForm from './components/PropertyForm.jsx';
 import PropertyList from './components/PropertyList.jsx';
-import { fetchProprietati } from './api.js';
-import { EMPTY_PROPERTY_FORM } from './data/properties.js';
-import { createProperty } from './utils/properties.js';
+import { createProprietate, deleteProprietate, fetchProprietati, updateProprietate } from './api.js';
 import './App.css';
 
 function getInitialTheme() {
@@ -16,9 +14,6 @@ export default function App() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [filters, setFilters] = useState({ query: '', status: 'all', category: 'all' });
-    const [formData, setFormData] = useState(EMPTY_PROPERTY_FORM);
-    const [errorMessage, setErrorMessage] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
     const [theme, setTheme] = useState(getInitialTheme);
 
     useEffect(() => {
@@ -48,7 +43,7 @@ export default function App() {
         };
     }, []);
 
-    const activeCount = properties.filter((property) => property.status === 'activ').length;
+    const activeCount = properties.filter((property) => property.status === 'activ' && !property.vandut).length;
 
     const visibleProperties = useMemo(() => {
         const query = filters.query.trim().toLowerCase();
@@ -67,51 +62,42 @@ export default function App() {
         });
     }, [filters, properties]);
 
-    const handleFieldChange = (event) => {
-        const { name, value } = event.target;
-        setFormData((previous) => ({ ...previous, [name]: value }));
-    };
+    async function handleAdd(proprietate) {
+        const creat = await createProprietate(proprietate);
+        setProperties((previous) => [...previous, creat]);
+    }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setErrorMessage('');
-        setSuccessMessage('');
-
-        const result = createProperty(formData, properties);
-
-        if (result.error) {
-            setErrorMessage(result.error);
+    async function handleToggle(id) {
+        const prop = properties.find((p) => p.id === id);
+        if (!prop) {
             return;
         }
 
-        setProperties((previous) => [result.property, ...previous]);
-        setFormData(EMPTY_PROPERTY_FORM);
-        setSuccessMessage('Anuntul a fost adaugat cu succes.');
-    };
+        const nextVandut = !(prop.vandut || prop.status === 'vandut');
 
-    const handleStatusChange = (propertyId, status) => {
-        setProperties((previous) =>
-            previous.map((property) =>
-                property.id === propertyId ? { ...property, status } : property
-            )
-        );
-    };
+        try {
+            const actualizat = await updateProprietate(id, {
+                vandut: nextVandut,
+                status: nextVandut ? 'vandut' : 'activ'
+            });
+            setProperties((previous) =>
+                previous.map((p) => (p.id === id ? actualizat : p))
+            );
+        } catch (err) {
+            setError(err.message);
+        }
+    }
 
-    const handleSoldToggle = (propertyId, isSold) => {
-        setProperties((previous) =>
-            previous.map((property) =>
-                property.id === propertyId
-                    ? { ...property, status: isSold ? 'vandut' : 'activ' }
-                    : property
-            )
-        );
-    };
-
-    const handleDelete = (propertyId) => {
-        setProperties((previous) =>
-            previous.filter((property) => property.id !== propertyId)
-        );
-    };
+    async function handleDelete(id) {
+        try {
+            await deleteProprietate(id);
+            setProperties((previous) =>
+                previous.filter((p) => p.id !== id)
+            );
+        } catch (err) {
+            setError(err.message);
+        }
+    }
 
     const handleThemeToggle = () => {
         const nextTheme = theme === 'dark' ? 'light' : 'dark';
@@ -129,40 +115,36 @@ export default function App() {
             />
 
             <main className="container">
-                <PropertyForm
-                    formData={formData}
-                    errorMessage={errorMessage}
-                    successMessage={successMessage}
-                    onFieldChange={handleFieldChange}
-                    onSubmit={handleSubmit}
-                />
+                <section className="panel">
+                    <h2>Adauga anunt</h2>
+                    <PropertyForm onAdd={handleAdd} />
+                </section>
 
-                {loading && (
-                    <section className="panel">
-                        <h2>Anunturile mele</h2>
-                        <p className="info">Se incarca proprietatile...</p>
-                    </section>
-                )}
+                <section className="panel">
+                    <h2>Anunturile mele</h2>
 
-                {error && (
-                    <section className="panel">
-                        <h2>Anunturile mele</h2>
-                        <p className="error">
-                            Nu am putut incarca datele: {error}. Ruleaza <code>npm run api</code>?
+                    {loading && (
+                        <p className="info" data-testid="loading">
+                            Se incarca proprietatile...
                         </p>
-                    </section>
-                )}
+                    )}
 
-                {!loading && !error && (
-                    <PropertyList
-                        properties={visibleProperties}
-                        filters={filters}
-                        onFiltersChange={setFilters}
-                        onStatusChange={handleStatusChange}
-                        onSoldToggle={handleSoldToggle}
-                        onDelete={handleDelete}
-                    />
-                )}
+                    {error && (
+                        <p className="error" data-testid="error">
+                            {error}
+                        </p>
+                    )}
+
+                    {!loading && (
+                        <PropertyList
+                            properties={visibleProperties}
+                            filters={filters}
+                            onFiltersChange={setFilters}
+                            onToggle={handleToggle}
+                            onDelete={handleDelete}
+                        />
+                    )}
+                </section>
             </main>
 
             <footer className="app-footer">Proiect Tehnologii Web - Doamne ajuta</footer>
