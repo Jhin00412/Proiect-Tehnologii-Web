@@ -181,16 +181,17 @@ npm run dev # terminal 2, http://localhost:5173
 
 Details per stage are in the `ai_log/` folder.
 
-## Status
+### Checklist Etapa 6
 
-- [x] Stage 1: static mockup
-- [x] Stage 2: data logic in JavaScript
-- [x] Stage 3: Vite and React project
-- [x] Stage 4: components rendered from data
-- [x] Stage 5: local state and events
-- [x] Stage 6: data from a mock API
-- [x] Stage 7: form and validation
-- [ ] Stage 8: routing and detail page
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S6-R1 | npm run api starts, route shows JSON | [frontend/package.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/package.json#L11) · [frontend/db.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/db.json) | open localhost:3001/proprietati |
+| S6-R2 | data no longer in React code | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L15) (useState([])) | read |
+| S6-R3 | loading message while waiting | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L140-L145) | --delay 4000 |
+| S6-R4 | error message when API is down | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L147-L154) | stop npm run api, refresh |
+| S6-R5 | fetch only in api.js, URL from env | [frontend/src/api.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/api.js#L1-L9) · [frontend/.env.example](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/.env.example#L1) | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/README.md) · [ai_log/etapa-06.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/ai_log/etapa-06.md) | read |
+| S6-R7 | commit "Stage 6: data from a mock API" pushed | [Stage 6 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/73c8abadaf276434dec2dae62d613619e8d738b5) | check commit history |
 
 ## Stage 7: form and validation
 Tasks can be added from the page. The form is controlled and validated,
@@ -205,28 +206,27 @@ in the list.
 
 Details per stage are in the `ai_log/` folder.
 
-### Checklist Etapa 6
-
-| ID | Requirement | Where (permalink) | How to check |
-|---|---|---|---|
-| S6-R1 | npm run api starts, route shows JSON | [frontend/package.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/package.json#L11) · [frontend/db.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/db.json) | open localhost:3001/proprietati |
-| S6-R2 | data no longer in React code | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L15) (useState([])) | read |
-| S6-R3 | loading message while waiting | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L140-L145) | --delay 4000 |
-| S6-R4 | error message when API is down | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L147-L154) | stop npm run api, refresh |
-| S6-R5 | fetch only in api.js, URL from env | [frontend/src/api.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/api.js#L1-L9) · [frontend/.env.example](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/.env.example#L1) | search for fetch |
-| S6-R6 | README Stage 6 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/README.md) · [ai_log/etapa-06.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/ai_log/etapa-06.md) | read |
-| S6-R7 | commit "Stage 6: data from a mock API" pushed | [Stage 6 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/73c8abadaf276434dec2dae62d613619e8d738b5) | check commit history |
-
 ### Checklist Etapa 7
 
 | ID | Requirement | Where (permalink) | How to check |
 |---|---|---|---|
-| S7-R1 | controlled form: value + onChange on every field | [frontend/src/components/PropertyForm.jsx](frontend/src/components/PropertyForm.jsx) | read |
-| S7-R2 | empty title shows an error, nothing is sent | [frontend/src/components/PropertyForm.jsx](frontend/src/components/PropertyForm.jsx#L17-L29) (valideaza) | submit empty, watch Network |
-| S7-R3 | added item shows in the list and survives refresh | [frontend/src/App.jsx](frontend/src/App.jsx#L67-L70) (handleAdd), [frontend/src/api.js](frontend/src/api.js#L18-L23) | add, refresh |
-| S7-R4 | toggle and delete survive refresh | [frontend/src/App.jsx](frontend/src/App.jsx#L72-L102) | toggle/delete, refresh |
-| S7-R5 | button disabled while sending, form cleared only on success | [frontend/src/components/PropertyForm.jsx](frontend/src/components/PropertyForm.jsx#L31-L77) | --delay 3000; stop API and submit |
-| S7-R6 | tw.json and the data-testid attributes from table 7.3 | [tw.json](tw.json), [frontend/src/components/PropertyCard.jsx](frontend/src/components/PropertyCard.jsx) | querySelectorAll in the console |
-| S7-R7 | README Stage 7 section + AI log | [README.md](README.md), [ai_log/etapa-07.md](ai_log/etapa-07.md) | read |
-| S7-R8 | commit "Stage 7: form and validation" pushed | commit history | git log |
+| S7-R1 | controlled form: value + onChange on every field | [frontend/src/components/PropertyForm.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/components/PropertyForm.jsx) | read |
+| S7-R2 | empty title shows an error, nothing is sent | [frontend/src/components/PropertyForm.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/components/PropertyForm.jsx#L17-L29) (valideaza) | submit empty, watch Network |
+| S7-R3 | added item shows in the list and survives refresh | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/App.jsx#L67-L70) (handleAdd), [frontend/src/api.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/api.js#L18-L23) | add, refresh |
+| S7-R4 | toggle and delete survive refresh | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/App.jsx#L72-L102) | toggle/delete, refresh |
+| S7-R5 | button disabled while sending, form cleared only on success | [frontend/src/components/PropertyForm.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/components/PropertyForm.jsx#L31-L77) | --delay 3000; stop API and submit |
+| S7-R6 | tw.json and the data-testid attributes from table 7.3 | [tw.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/tw.json), [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/components/PropertyCard.jsx) | querySelectorAll in the console |
+| S7-R7 | README Stage 7 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/README.md) · [ai_log/etapa-07.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/ai_log/etapa-07.md) | read |
+| S7-R8 | commit "Stage 7: form and validation" pushed | [Stage 7 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/dbf213d32767ff09052582a33f4548504399f4f1) | check commit history |
+
+## Status
+
+- [x] Stage 1: static mockup
+- [x] Stage 2: data logic in JavaScript
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [x] Stage 5: local state and events
+- [x] Stage 6: data from a mock API
+- [x] Stage 7: form and validation
+- [ ] Stage 8: routing and detail page
 
