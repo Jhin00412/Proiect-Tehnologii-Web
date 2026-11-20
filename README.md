@@ -49,7 +49,7 @@ Sample data used across all stages:
 | S1-R4 | Header, form (text + select), 3 cards with own data | [index.html](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/ee5223c54cf586966707c72d616cda7bcfcf0f20/index.html#L12-L230) | Open the page |
 | S1-R5 | Finished card looks different | [style.css](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/ee5223c54cf586966707c72d616cda7bcfcf0f20/style.css#L445-L454) | Look at the sold card |
 | S1-R6 | 2 columns on desktop, 1 under 700px | [style.css](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/ee5223c54cf586966707c72d616cda7bcfcf0f20/style.css#L490-L539) | Resize below 700px |
-| S1-R7 | Visible keyboard focus and readable dark theme | [Stage 1 focus in `style.css`](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/ee5223c54cf586966707c72d616cda7bcfcf0f20/style.css#L478-L484) · [Dark theme in `frontend/src/App.css`](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.css#L31-L115) | Press Tab to verify focus; use the theme button to verify dark mode. Note: the original Stage 1 mockup commit contains the focus style; the dark theme is implemented in the React app by Stage 5. |
+| S1-R7 | Visible keyboard focus and readable dark theme | [Stage 1 focus in `style.css`](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/ee5223c54cf586966707c72d616cda7bcfcf0f20/style.css#L478-L484) - [Dark theme in `frontend/src/App.css`](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.css#L31-L115) | Press Tab to verify focus; use the theme button to verify dark mode. Note: the original Stage 1 mockup commit contains the focus style; the dark theme is implemented in the React app by Stage 5. |
 | S1-R8 | Stage 1 commit pushed | [Stage 1 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/ee5223c54cf586966707c72d616cda7bcfcf0f20) | Check commit history |
 
 ## Stage 2: data logic
@@ -71,7 +71,7 @@ separate from the DOM.
 | S2-R3 | List, count, search, add, toggle and delete | [proprietati.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/fabfbc374dd55f72b99bcfe46afcc7400ec4623d/proprietati.js#L97-L295) | Inspect console output |
 | S2-R4 | Add rejects empty name and invalid tag | [proprietati.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/fabfbc374dd55f72b99bcfe46afcc7400ec4623d/proprietati.js#L127-L271) | Check the validation messages |
 | S2-R5 | Original array unchanged after add | [proprietati.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/fabfbc374dd55f72b99bcfe46afcc7400ec4623d/proprietati.js#L324-L345) | Compare new and original list lengths |
-| S2-R6 | README Stage 2 section and AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) · [ai_log/etapa-02.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-02.md#L1-L292) | Read |
+| S2-R6 | README Stage 2 section and AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) - [ai_log/etapa-02.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-02.md#L1-L292) | Read |
 | S2-R7 | Stage 2 commit pushed | [Stage 2 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/fabfbc374dd55f72b99bcfe46afcc7400ec4623d) | Check commit history |
 
 ## Stage 3: Vite and React project
@@ -108,8 +108,8 @@ Open the address printed in the terminal (usually http://localhost:5173).
 | S3-R2 | App name and counter computed from data | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/src/App.jsx#L1-L88) | Change data and save |
 | S3-R3 | Data from the project README, not the example | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/src/App.jsx#L1-L77) | Compare the properties with README sample data |
 | S3-R4 | Stage 1 styles reused | [frontend/src/App.css](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/src/App.css#L1-L150) | Inspect the rendered page |
-| S3-R5 | `node_modules` ignored and build configured | [frontend/.gitignore](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/.gitignore#L1-L14) · [frontend/package.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/package.json#L6-L10) | Run `npm run build`; confirm `node_modules/` and `dist/` are ignored |
-| S3-R6 | README Stage 3 section and AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) · [ai_log/etapa-03.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-03.md#L1-L10) | Read |
+| S3-R5 | `node_modules` ignored and build configured | [frontend/.gitignore](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/.gitignore#L1-L14) - [frontend/package.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/e0d6f56ebb780ca46e65a9973e58188a21d8fff6/frontend/package.json#L6-L10) | Run `npm run build`; confirm `node_modules/` and `dist/` are ignored |
+| S3-R6 | README Stage 3 section and AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) - [ai_log/etapa-03.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-03.md#L1-L10) | Read |
 | S3-R7 | Stage 3 commit pushed | [Stage 3 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/e0d6f56ebb780ca46e65a9973e58188a21d8fff6) | Check commit history |
 
 ## Stage 4: components
@@ -126,12 +126,12 @@ each property through props.
 
 | ID | Requirement | Where (permalink) | How to check |
 |---|---|---|---|
-| S4-R1 | At least two components in `src/components/` | [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyCard.jsx#L1-L54) · [frontend/src/components/PropertyList.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyList.jsx#L1-L70) | Open the components folder |
+| S4-R1 | At least two components in `src/components/` | [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyCard.jsx#L1-L54) - [frontend/src/components/PropertyList.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyList.jsx#L1-L70) | Open the components folder |
 | S4-R2 | Card receives data through props | [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyCard.jsx#L5-L35) | Read the component parameters and rendered fields |
 | S4-R3 | `map` + `key={id}`, no console warnings | [frontend/src/components/PropertyList.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyList.jsx#L58-L66) | Open DevTools Console |
 | S4-R4 | Message for empty list | [frontend/src/components/PropertyList.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyList.jsx#L55-L57) | Temporarily set the properties array to `[]` |
 | S4-R5 | State changes the card look | [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/4a6dc04d6d34e1aee2096952ca73af68670b91ed/frontend/src/components/PropertyCard.jsx#L5-L21) | Change a property's status |
-| S4-R6 | README Stage 4 section and AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) · [ai_log/etapa-04.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-04.md#L1-L396) | Read |
+| S4-R6 | README Stage 4 section and AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) - [ai_log/etapa-04.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-04.md#L1-L396) | Read |
 | S4-R7 | Stage 4 commit pushed | [Stage 4 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/4a6dc04d6d34e1aee2096952ca73af68670b91ed) | Check commit history |
 
 ## Stage 5: local state and events
@@ -156,12 +156,12 @@ Details per stage are in the `ai_log/` folder.
 | ID | Requirement | Where (permalink) | How to check |
 |---|---|---|---|
 | S5-R1 | List kept in `useState`, in App | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L17-L25) | Read |
-| S5-R2 | Toggling changes state and card look | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L74-L82) · [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/components/PropertyCard.jsx#L37-L54) | Click a sold-status checkbox |
-| S5-R3 | Delete removes the item | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L84-L88) · [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/components/PropertyCard.jsx#L70-L77) | Click Delete |
+| S5-R2 | Toggling changes state and card look | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L74-L82) - [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/components/PropertyCard.jsx#L37-L54) | Click a sold-status checkbox |
+| S5-R3 | Delete removes the item | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L84-L88) - [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/components/PropertyCard.jsx#L70-L77) | Click Delete |
 | S5-R4 | Header counter derived, not in state | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L25-L25) | Toggle a property's status and watch the header |
 | S5-R5 | Immutable updates (no `push`, `splice` or direct assignment) | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L66-L88) | Read the state update functions |
-| S5-R6 | Light/dark toggle: state + `data-theme` on `html` | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L13-L14) · [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L90-L96) · [frontend/src/App.css](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.css#L31-L115) | Click the theme button in both OS theme settings |
-| S5-R7 | No console warnings; README and AI log updated | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) · [ai_log/etapa-05.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-05.md#L1-L1250) | Open DevTools Console |
+| S5-R6 | Light/dark toggle: state + `data-theme` on `html` | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L13-L14) - [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.jsx#L90-L96) - [frontend/src/App.css](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/frontend/src/App.css#L31-L115) | Click the theme button in both OS theme settings |
+| S5-R7 | No console warnings; README and AI log updated | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/README.md#L1-L105) - [ai_log/etapa-05.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/bca6a1720fc13b3876236d7118c5a0e3874a7cf7/ai_log/etapa-05.md#L1-L1250) | Open DevTools Console |
 | S5-R8 | Stage 5 commit pushed | [Stage 5 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/bca6a1720fc13b3876236d7118c5a0e3874a7cf7) | Check commit history |
 
 ## Stage 6: data from a mock API
@@ -185,12 +185,12 @@ Details per stage are in the `ai_log/` folder.
 
 | ID | Requirement | Where (permalink) | How to check |
 |---|---|---|---|
-| S6-R1 | npm run api starts, route shows JSON | [frontend/package.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/package.json#L11) · [frontend/db.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/db.json) | open localhost:3001/proprietati |
+| S6-R1 | npm run api starts, route shows JSON | [frontend/package.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/package.json#L11) - [frontend/db.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/db.json) | open localhost:3001/proprietati |
 | S6-R2 | data no longer in React code | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L15) (useState([])) | read |
 | S6-R3 | loading message while waiting | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L140-L145) | --delay 4000 |
 | S6-R4 | error message when API is down | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/App.jsx#L147-L154) | stop npm run api, refresh |
-| S6-R5 | fetch only in api.js, URL from env | [frontend/src/api.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/api.js#L1-L9) · [frontend/.env.example](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/.env.example#L1) | search for fetch |
-| S6-R6 | README Stage 6 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/README.md) · [ai_log/etapa-06.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/ai_log/etapa-06.md) | read |
+| S6-R5 | fetch only in api.js, URL from env | [frontend/src/api.js](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/src/api.js#L1-L9) - [frontend/.env.example](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/frontend/.env.example#L1) | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/README.md) - [ai_log/etapa-06.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/73c8abadaf276434dec2dae62d613619e8d738b5/ai_log/etapa-06.md) | read |
 | S6-R7 | commit "Stage 6: data from a mock API" pushed | [Stage 6 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/73c8abadaf276434dec2dae62d613619e8d738b5) | check commit history |
 
 ## Stage 7: form and validation
@@ -216,8 +216,33 @@ Details per stage are in the `ai_log/` folder.
 | S7-R4 | toggle and delete survive refresh | [frontend/src/App.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/App.jsx#L72-L102) | toggle/delete, refresh |
 | S7-R5 | button disabled while sending, form cleared only on success | [frontend/src/components/PropertyForm.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/components/PropertyForm.jsx#L31-L77) | --delay 3000; stop API and submit |
 | S7-R6 | tw.json and the data-testid attributes from table 7.3 | [tw.json](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/tw.json), [frontend/src/components/PropertyCard.jsx](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/frontend/src/components/PropertyCard.jsx) | querySelectorAll in the console |
-| S7-R7 | README Stage 7 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/README.md) · [ai_log/etapa-07.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/ai_log/etapa-07.md) | read |
+| S7-R7 | README Stage 7 section + AI log | [README.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/README.md) - [ai_log/etapa-07.md](https://github.com/Jhin00412/Proiect-Tehnologii-Web/blob/dbf213d32767ff09052582a33f4548504399f4f1/ai_log/etapa-07.md) | read |
 | S7-R8 | commit "Stage 7: form and validation" pushed | [Stage 7 commit](https://github.com/Jhin00412/Proiect-Tehnologii-Web/commit/dbf213d32767ff09052582a33f4548504399f4f1) | check commit history |
+
+## Stage 8: routing and detail page
+Three pages behind React Router: the list, a detail page at `/proprietati/:id`,
+and an about page, plus a 404 page. Component styles moved to CSS Modules.
+
+## AI usage
+
+| Tool | Used for |
+| --- | --- |
+| Google Antigravity / Gemini | Configurare rute cu React Router (BrowserRouter, Routes, Route, NavLink, Outlet, useParams), pagini de lista, detaliu, despre si 404, migrare stiluri catre CSS Modules (.module.css) si configurare data-testid; see [ai_log/etapa-08.md](ai_log/etapa-08.md). |
+
+Details per stage are in the `ai_log/` folder.
+
+### Checklist Etapa 8
+
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S8-R1 | header navigation changes page without reload | [frontend/src/App.jsx](frontend/src/App.jsx), [frontend/src/components/Layout.jsx](frontend/src/components/Layout.jsx) | click links, watch Network |
+| S8-R2 | click on an item opens its detail page | [frontend/src/components/PropertyCard.jsx](frontend/src/components/PropertyCard.jsx), [frontend/src/pages/ProprietateDetaliuPage.jsx](frontend/src/pages/ProprietateDetaliuPage.jsx) | click a title |
+| S8-R3 | refresh on the detail URL works; missing id shows an error | [frontend/src/pages/ProprietateDetaliuPage.jsx](frontend/src/pages/ProprietateDetaliuPage.jsx) | refresh /proprietati/1, open /proprietati/999 |
+| S8-R4 | unknown URL shows the app 404 page | [frontend/src/App.jsx](frontend/src/App.jsx#L14), [frontend/src/pages/NotFoundPage.jsx](frontend/src/pages/NotFoundPage.jsx) | open /ceva |
+| S8-R5 | each component has its .module.css; index.css only shared styles | `src/components`, `src/pages`, [frontend/src/index.css](frontend/src/index.css) | read |
+| S8-R6 | data-testid attributes from tables 7.3 and 8.2; detail route /<resource>/:id | [frontend/src/components/Layout.jsx](frontend/src/components/Layout.jsx), [frontend/src/components/PropertyCard.jsx](frontend/src/components/PropertyCard.jsx), [frontend/src/pages/ProprietateDetaliuPage.jsx](frontend/src/pages/ProprietateDetaliuPage.jsx), [frontend/src/pages/NotFoundPage.jsx](frontend/src/pages/NotFoundPage.jsx) | querySelector in the console |
+| S8-R7 | README Stage 8 section + AI log | [README.md](README.md), [ai_log/etapa-08.md](ai_log/etapa-08.md) | read |
+| S8-R8 | commit "Stage 8: routing and detail page" pushed | commit history | git log |
 
 ## Status
 
@@ -228,5 +253,6 @@ Details per stage are in the `ai_log/` folder.
 - [x] Stage 5: local state and events
 - [x] Stage 6: data from a mock API
 - [x] Stage 7: form and validation
-- [ ] Stage 8: routing and detail page
+- [x] Stage 8: routing and detail page
+- [ ] Stage 9: own backend with Express
 

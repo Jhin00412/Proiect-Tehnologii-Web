@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form input,
+.form select {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 400;
+    background: var(--card);
+    color: var(--text);
+}
+
+.form input[aria-invalid="true"] {
+    border-color: var(--red);
+}

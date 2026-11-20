@@ -15,6 +15,10 @@ export function fetchProprietati() {
     return request("/proprietati");
 }
 
+export function fetchProprietate(id) {
+    return request(`/proprietati/${id}`);
+}
+
 export function createProprietate(proprietate) {
     return request("/proprietati", {
         method: "POST",

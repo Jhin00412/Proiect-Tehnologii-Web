@@ -1,0 +1,53 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+}
+
+.card:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.main input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.title {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.title:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.done .title {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.meta {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
